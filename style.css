@@ -174,6 +174,12 @@ main
     background-color: var(--clr-very-light-grayish-cyan);
     padding: 0.5rem;
     justify-content: space-between;
+    border: 2px solid transparent;
+}
+
+.input-section > div:has(textarea:focus)
+{
+    border: 2px solid var(--clr-strong-cyan);
 }
 
 .input-section img
@@ -197,6 +203,12 @@ main
     font-family: var(--ff-def);
     font-weight: var(--fw-def);
     font-size: var(--fs-250);
+}
+
+.tip-percentages button:hover
+{
+    background-color: var(--clr-strong-cyan);
+    color: var(--clr-very-dark-cyan);
 }
 
 .tip-percentages button:nth-child(3)
