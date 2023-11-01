@@ -1,0 +1,261 @@
+:root
+{
+    /* Colors */
+    /* Primary */
+    --clr-strong-cyan: hsl(172,67%,45%);
+    /* Neutral */
+    --clr-very-dark-cyan:hsl(183, 100%, 15%) ;
+    --clr-dark-grayish-cyan: hsl(186, 14%, 43%) ;
+    --clr-grayish-cyan:hsl(184, 14%, 56%) ;
+    --clr-light-grayish-cyan:  hsl(185, 41%, 84%) ;
+    --clr-very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --clr-white:  hsl(0, 0%, 100%);
+
+    /* Font sizes */
+    --fs-100: 1rem;
+    --fs-200: 1.1rem;
+    --fs-250: 1.2rem;
+    --fs-300: 1.4rem;
+    --fs-400: 1.6rem;
+    --fs-500: 1.8rem;
+    --fs-600: 2.0rem;
+
+    /* Font family */
+    --ff-def:'Space Mono', monospace;
+
+    /* Font weight */
+    --fw-def: 700;
+}
+
+img, picture
+{
+    width: 100%;
+}
+
+
+*, *::before, *::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body
+{
+    min-height: 100vh;
+    font-family: var(--ff-def);
+    background-color: var(--clr-light-grayish-cyan);
+    display: grid;
+    place-content: center;
+}
+
+button {
+    border: none;
+    outline: none;
+    fill: none;
+    background: none;
+    cursor: pointer;
+}
+
+main
+{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+.main-logo
+{
+    width: 5rem;
+}
+
+.main-container
+{
+    background-color: var(--clr-white);
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.calc-section
+{
+    background-color: var(--clr-very-dark-cyan);
+    border-radius: 0.8rem;
+    width: 25rem;
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.total-tip
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.total-tip p:first-child
+{
+    color: var(--clr-white);
+    font-size: var(--fs-200);
+    display: flex;
+    flex-direction: column;
+}
+
+.total-tip p:first-child > span
+{
+    color: var(--clr-dark-grayish-cyan);
+    font-size: var(--fs-100);
+}
+
+.total-tip p:last-child
+{
+    color: var(--clr-strong-cyan);
+    font-weight: var(--fw-def);
+    font-size: clamp( 1.8rem,5.5vw,3rem);
+}
+
+.total-tip > div
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reset-btn
+{
+    background-color: var(--clr-strong-cyan);
+    border-radius: 0.2rem;
+    padding-block: 0.5rem;
+    color: var(--clr-very-dark-cyan);
+    font-weight: var(--fw-def);
+    font-size: 0.9rem;
+}
+
+.main-container > div:first-child
+{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main-container > div:first-child > div
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.main-container > div:first-child h2
+{
+    color: var(--clr-dark-grayish-cyan);
+    font-size: var(--fs-100);
+}
+
+.input-section
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-section div
+{
+    display: flex;
+    align-items: center;
+    background-color: var(--clr-very-light-grayish-cyan);
+    padding: 0.5rem;
+    justify-content: space-between;
+}
+
+.input-section img
+{
+    width: 0.8rem;
+}
+
+.tip-percentages
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.tip-percentages button
+{
+    background-color: var(--clr-very-dark-cyan);
+    border-radius: 0.2rem;
+    padding: 0.5rem 1.2rem;
+    color: var(--clr-white);
+    font-family: var(--ff-def);
+    font-weight: var(--fw-def);
+    font-size: var(--fs-250);
+}
+
+.tip-percentages button:nth-child(3)
+{
+    background-color: var(--clr-strong-cyan);
+    color: var(--clr-very-dark-cyan);
+}
+
+.tip-percentages button:last-child
+{
+    background-color: var(--clr-very-light-grayish-cyan);
+    color: var(--clr-dark-grayish-cyan);
+}
+
+textarea {
+    width: max-content;
+    height: 2rem;
+    line-height: 2rem;
+    resize: none;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: var(--fs-400);
+    color: var(--clr-very-dark-cyan);
+    background-color: var(--clr-very-light-grayish-cyan);
+    font-weight: var(--fw-def);
+    text-align: end;
+    vertical-align: middle;
+    padding: 0;
+}
+
+@media (max-width: 52rem)
+{
+    body
+    {
+        align-content: end;
+        justify-content: center;
+    }
+    main
+    {
+       width: 100vw;
+    }
+
+    .main-container
+    {
+        flex-direction: column;
+        width: 100%;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .tip-percentages
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .calc-section
+    {
+        width: 100%;
+    }
+
+
+}
