@@ -141,6 +141,11 @@ main
     font-size: 0.9rem;
 }
 
+.reset-btn:hover
+{
+    background-color: var(--clr-light-grayish-cyan);
+}
+
 .main-container > div:first-child
 {
     display: flex;
